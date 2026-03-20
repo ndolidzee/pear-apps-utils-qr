@@ -5,6 +5,7 @@ A lightweight utility package for generating QR codes in SVG format. This packag
 ## Table of Contents
 
 - [Features](#features)
+- [Security Notice](#security-notice)
 - [Installation](#installation)
 - [Usage Examples](#usage-examples)
 - [Dependencies](#dependencies)
@@ -17,16 +18,21 @@ A lightweight utility package for generating QR codes in SVG format. This packag
 - Promise-based API
 - Lightweight implementation
 
+## Security Notice
+
+1. To ensure the security and integrity of your projects, please note that official PearPass packages are distributed exclusively through our GitHub organization.
+2. Any packages with similar names found on the npm registry or other third-party package managers are not affiliated with PearPass and should be strictly avoided. We recommend installing directly from this repository to ensure you are using the verified, open-source version.
+
 ## Installation
 
 ```bash
-npm install pear-apps-utils-qr
+npm install git+https://github.com/tetherto/pear-apps-utils-qr.git
 ```
 
 ## Usage Examples
 
 ```javascript
-import { generateQRCodeSVG } from 'pear-apps-utils-qr';
+import { generateQRCodeSVG } from '@tetherto/pear-apps-utils-qr';
 
 // Basic usage
 generateQRCodeSVG('https://example.com', { type: 'svg', margin: 4 })
@@ -47,17 +53,11 @@ const svgOutput = await generateQRCodeSVG('Your text here', qrOptions);
 
 - [qrcode](https://www.npmjs.com/package/qrcode) - QR code generation library
 
-## Depended Submodules
-
-The following sibling submodules must be present in the workspace (they are not declared as npm dependencies):
-
-- [`tether-dev-docs`](../tether-dev-docs)
-
 ## Related Projects
 
-- [pearpass-app-mobile](https://github.com/tetherto/pearpass-app-mobile) - A mobile app for PearPass, a password manager
-- [pearpass-app-desktop](https://github.com/tetherto/pearpass-app-desktop) - A desktop app for PearPass, a password
-- [tether-dev-docs](https://github.com/tetherto/tether-dev-docs) - Documentations and guides for developers
+- [@tetherto/pearpass-app-mobile](https://github.com/tetherto/pearpass-app-mobile) - A mobile app for PearPass, a password manager
+- [@tetherto/pearpass-app-desktop](https://github.com/tetherto/pearpass-app-desktop) - A desktop app for PearPass, a password
+- [@tetherto/tether-dev-docs](https://github.com/tetherto/tether-dev-docs) - Documentations and guides for developers
 
 ## License
 
